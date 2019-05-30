@@ -11,8 +11,10 @@
 		[
 			"module-resolver",
 			{
+				"root": ["./"],
 				"alias": {
-					"dva": "dva-no-router"
+					"dva": "dva-no-router",
+					"@": "./"
 				}
 			}
 		]

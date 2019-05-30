@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { Input, Select, Icon, AutoComplete, Button } from 'antd'
-import { debounce } from '../utils/utils'
+import { debounce } from '@/utils/utils'
 
 import hs from './Header.less'
 
 // import img from '@/assets/logo.png'
-import * as api from '../services/api'
+import * as api from '@/services/api'
 import { SelectValue } from 'antd/lib/select'
 const { Search } = Input
 const { Option } = AutoComplete

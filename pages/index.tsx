@@ -1,7 +1,7 @@
 import React from 'react'
 import { Carousel, Icon } from 'antd'
 import style from './Index.less'
-import Layout from '../layouts/Layout'
+import Layout from '@/layouts/Layout'
 // import banner from '@/assets/banner.jpg'
 // import img1 from '@/assets/pro1.jpg'
 // import img2 from '@/assets/pro2.jpg'

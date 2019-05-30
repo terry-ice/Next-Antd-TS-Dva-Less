@@ -16,16 +16,14 @@ if (typeof require !== 'undefined') {
 }
 
 module.exports = withTypescript(
-	withCSS(
-		withLessExcludeAntd({
-			lessLoaderOptions: {
-				javascriptEnabled: true,
-				modifyVars: themeVariables // make your antd custom effective
-			},
-			cssModules: true,
-			webpack: function(config) {
-				return config
-			}
-		})
-	)
+	withLessExcludeAntd({
+		lessLoaderOptions: {
+			javascriptEnabled: true,
+			modifyVars: themeVariables // make your antd custom effective
+		},
+		cssModules: true,
+		webpack: function(config) {
+			return config
+		}
+	})
 )
