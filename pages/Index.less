@@ -1,0 +1,101 @@
+@import '../utils/utils.less';
+
+.indexTop {
+	display: flex;
+	padding-left: 270px;
+}
+.slide {
+	text-align: center;
+	width: 666px;
+	height: 360px;
+	line-height: 160px;
+	background: #364d79;
+	overflow: hidden;
+}
+.indexBanner {
+	flex: 1;
+	height: 430px;
+	background-image: url('/static/banner.jpg');
+	background-size: cover;
+}
+
+.ant-carousel .slick-slide h3 {
+	color: #fff;
+}
+
+.lowProTitle {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+	.ProTitleLeft {
+		display: flex;
+		h2 {
+			margin-bottom: 0;
+			min-width: 105px;
+			height: 32px;
+			background: 2px 0 no-repeat;
+			background-image: url('/static/shuma.jpg');
+		}
+		.tagList {
+			display: flex;
+			align-items: flex-end;
+			margin-left: 20px;
+			font-size: 12px;
+			margin-bottom: 5px;
+			span {
+				padding: 0 8px;
+				border-left: 1px solid #d1d3d5;
+			}
+			a {
+				color: @grayText;
+				&:hover {
+					color: @themeColor;
+				}
+			}
+		}
+	}
+}
+
+.goodsList {
+	margin: 20px -15px 20px 0;
+	.goodsBox {
+		float: left;
+		height: 290px;
+		padding: 0 15px 15px 0;
+		width: 20%;
+	}
+	.goodsItem {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		height: 100%;
+		background: #fff;
+		box-shadow: 0 1px 12px 2px #f1f1f1;
+		& > a {
+			display: block;
+			height: 100%;
+			padding-top: 35px;
+		}
+		.proImg {
+			margin: 0 auto;
+			display: block;
+			width: 150px;
+		}
+		.proTitle {
+			color: #3a3a3a;
+			height: 42px;
+			padding: 0 28px;
+			margin: 10px 0;
+			overflow: hidden;
+		}
+		.proPrice {
+			color: @themeColor;
+			text-align: center;
+		}
+		&:hover {
+			box-shadow: 0 12px 36px #ddd;
+			transition: all 0.2s linear 0s;
+		}
+	}
+}

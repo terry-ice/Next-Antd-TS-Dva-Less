@@ -1,0 +1,162 @@
+@import '../utils/utils.less';
+ul {
+	margin-bottom: 0;
+}
+.nav {
+	background: @grayBg;
+	font-size: 12px;
+	color: @grayText;
+}
+.navCon {
+	display: flex;
+	float: right;
+}
+.navLi {
+	position: relative;
+	.h {
+		padding: 8px 10px;
+		position: relative;
+		z-index: 10;
+		margin-left: -1px;
+	}
+	a {
+		display: block;
+		color: @grayText;
+	}
+	&:not(:last-child) {
+		&:after {
+			position: absolute;
+			margin: auto;
+			top: 0;
+			bottom: 0;
+			content: '';
+			width: 1px;
+			height: 16px;
+			background: #d9d9d9;
+			right: 0px;
+		}
+	}
+	&:hover {
+		background: #fff;
+		.h {
+			background: #fff;
+		}
+		a {
+			color: @themeColor;
+		}
+	}
+}
+
+header {
+	padding: 20px 0;
+	.searchWrap {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		padding-left: 85px;
+	}
+}
+
+.shopNavWrap {
+	background: @grayBg;
+	.shopNav {
+		width: 270px;
+		height: 50px;
+		line-height: 50px;
+		background: #000;
+		color: @whiteText;
+		padding: 0 20px;
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.proMenuList {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background: @themeColor;
+		z-index: 20;
+		.proMenuLabel {
+			width: 270px;
+			height: 36px;
+			line-height: 36px;
+			padding: 0 20px;
+			background: #fff;
+			transition: height 0.5s ease;
+			border-right: 1px solid #ddd;
+			border-left: 1px solid #ddd;
+			.catLabel {
+				color: @text;
+			}
+			&:hover {
+				background: @themeColor;
+				border-color: @themeColor;
+				.catLabel {
+					color: @whiteText;
+				}
+				.proMenuWrap {
+					display: block;
+				}
+			}
+		}
+	}
+	.proMenuDetailLeft {
+		width: 120px;
+	}
+	.proMenuDetailRight {
+		flex: 1;
+		.catD {
+			border-left: 1px solid @grayText;
+			padding: 0 6px;
+		}
+	}
+	.proMenuWrap {
+		display: none;
+		position: absolute;
+		min-height: 576px; // 为了让hover能够点到具体的tag
+		left: 270px;
+		top: 0;
+		width: 930px; // 1200 - 270
+		border: 1px solid #000;
+		background: #fff;
+		padding: 24px 15px;
+		line-height: 24px;
+		.menuCatLine {
+			display: flex;
+			line-height: 24px;
+			margin-bottom: 18px;
+		}
+		a {
+			color: @text;
+			&:hover {
+				color: @themeColor;
+			}
+		}
+	}
+
+	.shopNavList {
+		text-align: center;
+		flex: 1;
+		display: flex;
+
+		li {
+			height: 50px;
+			line-height: 50px;
+			padding: 0 15px;
+			a {
+				color: @grayText;
+			}
+			&:hover {
+				background: #fff;
+				a {
+					color: @themeColor;
+				}
+			}
+		}
+	}
+}
+
+.showCatAni {
+	height: 36px;
+}
