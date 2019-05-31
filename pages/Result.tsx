@@ -3,7 +3,7 @@ import { Breadcrumb, Checkbox, Icon, Pagination } from 'antd'
 import Layout from '@/layouts/Layout'
 import style from './Result.less'
 import * as api from '@/services/api'
-import Box from './Box'
+import Box from '../components/Box/Box'
 const Result = () => {
 	const payload = {
 		attribute: [],

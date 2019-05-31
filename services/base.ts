@@ -68,7 +68,7 @@ const errorHandle = (status: number, other: string) => {
 
 // 创建axios实例
 const instance = axios.create({
-	timeout: 1000 * 12
+	// timeout: 1000 * 12
 	// todo 读取env的地址
 	//    baseURL:process.env.BASE_URL
 })

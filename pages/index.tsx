@@ -11,6 +11,8 @@ import Layout from '@/layouts/Layout'
 // const imgArr = [img1, img2, img3, img4, img5]
 
 const Index: React.FC = props => {
+	console.log(process.browser)
+
 	return (
 		<Layout menuDrop={true}>
 			<main>
