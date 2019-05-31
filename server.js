@@ -9,6 +9,21 @@ app.prepare()
 	.then(() => {
 		const server = express()
 
+		server.get('/', (req, res) => {
+			console.log(req.url)
+			return app.render(req, res, '/index', req.query)
+			// return handle(req, res)
+		})
+		server.get('/result', (req, res) => {
+			console.log(req.url)
+			return app.render(req, res, '/Result', req.query)
+			// return handle(req, res)
+		})
+		server.get('/detail', (req, res) => {
+			console.log(req.url)
+			return app.render(req, res, '/Detail', req.query)
+			// return handle(req, res)
+		})
 		server.get('*', (req, res) => {
 			return handle(req, res)
 		})
